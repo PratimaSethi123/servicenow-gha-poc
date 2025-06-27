@@ -1,7 +1,8 @@
-name: Deploy triggered by ServiceNow
+name: Snow Triggered Deploy
 
 on:
-  workflow_dispatch:   # Allows manual/API trigger
+  repository_dispatch:
+    types: [snow-trigger]
 
 jobs:
   print-trigger:
