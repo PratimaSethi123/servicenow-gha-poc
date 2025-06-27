@@ -1,1 +1,11 @@
+name: Deploy triggered by ServiceNow
 
+on:
+  workflow_dispatch:   # Allows manual/API trigger
+
+jobs:
+  print-trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print ServiceNow Trigger Message
+        run: echo "GitHub Actions pipeline triggered by ServiceNow deploy event!"
