@@ -8,5 +8,8 @@ jobs:
   print-trigger:
     runs-on: ubuntu-latest
     steps:
+      - name: Print Change Request Number
+        run: echo "Change Request Number is ${{ github.event.client_payload.number }}"
+
       - name: Print ServiceNow Trigger Message
         run: echo "GitHub Actions pipeline triggered by ServiceNow deploy event!"
